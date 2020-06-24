@@ -1,0 +1,151 @@
+@charset "utf-8";
+/*myitem profile.css*/
+@import url(./reset.css);
+@import url(./core.css);
+@import url(./common.css);
+
+.main-3dmodel {
+    position: relative;
+    top: 100px;
+    width: 200px;
+    height: 400px;
+    margin: 0 auto;
+    transform-style: preserve-3d;
+    transform: rotateY(30deg) rotateX(10deg);
+    /*outline: 1px solid red;*/
+    animation: rollingY 1.5s ease-in-out 1s,
+        rollingY2 1.5s ease-in-out 2.5s;
+}
+
+.main-3dmodel > li {
+    position: absolute;
+    background-color: #fff;
+    width: 200px;
+    height: 400px;
+}
+
+.main-3dmodel > li:nth-child(1) {
+    background-image: url(../images/ip01.png);
+    background-repeat: no-repeat;
+    background-position: 0;
+    background-size: 100% 100%;
+    transform: translateZ(10px);
+}
+
+.main-3dmodel > li:nth-child(2) {
+    left: -10px;
+    width: 20px;
+    background-image: url(../images/ip04.png);
+    background-repeat: no-repeat;
+    background-position: 0;
+    background-size: 100% 100%;
+    transform: rotateY(-90deg);
+}
+
+.main-3dmodel > li:nth-child(3) {
+    right: -10px;
+    width: 20px;
+    background-image: url(../images/ip03.png);
+    background-repeat: no-repeat;
+    background-position: 0;
+    background-size: 100% 100%;
+    transform: rotateY(90deg);
+}
+
+.main-3dmodel > li:nth-child(4) {
+    top: -10px;
+    height: 20px;
+    background-image: url(../images/ip06.png);
+    background-repeat: no-repeat;
+    background-position: 0;
+    background-size: 100% 100%;
+    transform: rotateX(90deg) rotateY(180deg);
+}
+
+.main-3dmodel > li:nth-child(5) {
+    bottom: -10px;
+    height: 20px;
+    background-image: url(../images/ip05.png);
+    background-repeat: no-repeat;
+    background-position: 0;
+    background-size: 100% 100%;
+    transform: rotateX(90deg) rotateY(180deg);
+}
+
+.main-3dmodel > li:nth-child(6) {
+    background-image: url(../images/ip02.png);
+    background-repeat: no-repeat;
+    background-position: 0;
+    background-size: 100% 100%;
+    transform: translateZ(-10px) rotateY(180deg);
+}
+
+.main-3dmodel-face {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 250px;
+    background: url(../images/prof01.png) no-repeat center/100%;
+    animation: modelFace 1.2s linear 4s forwards;
+}
+
+@keyframes rollingY {
+    to {
+        transform: rotateY(-330deg) rotateX(10deg);
+    }
+}
+
+@keyframes rollingY2 {
+    to {
+        transform: rotateY(390deg) rotateX(10deg);
+    }
+}
+
+@keyframes modelFace {
+    0% {
+        height: 250px;
+        background-image: url(../images/prof01.png);
+    }
+
+    40% {
+        height: 0px;
+        background-image: url(../images/prof01.png);
+    }
+
+    60% {
+        height: 0px;
+        background-image: url(../images/prof02.png);
+    }
+
+    100% {
+        height: 250px;
+        background-image: url(../images/prof02.png);
+    }
+}
+
+.main-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 0px;
+    animation: showText .48s linear 4.72s forwards;
+}
+
+.text-left{
+    left: 10px;
+    background: url(../images/prof01_txt.png) no-repeat;
+}
+
+.text-right{
+    right: 10px;
+    background: url(../images/prof02_txt.png) no-repeat;
+}
+
+@keyframes showText {
+    to {
+        height: 200px;
+    }
+}

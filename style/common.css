@@ -1,0 +1,355 @@
+@charset "utf-8";
+/*myitem common.css*/
+
+.wrap {
+    width: 1000px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 5px #ccc;
+}
+
+/*.wrap > * {
+    outline: 1px dashed blue;
+}*/
+
+#top {
+    position: relative;
+    height: 130px;
+    z-index: 99;
+}
+
+#top-logo {
+    position: relative;
+    left: 10px;
+    bottom: 5px;
+    /*outline: 1px dotted red;*/
+    width: 150px;
+    height: 90px;
+    /*padding-top: 20px;
+    padding-left: 10px;*/
+}
+
+.logo-text {
+    position: absolute;
+    bottom: 0;
+}
+
+.logo-redball {
+    position: absolute;
+    top: 40px;
+    left: 55px;
+}
+
+#top-logo.play .logo-redball {
+    /*anmation*/
+    animation: redball-rising .8s ease-in-out 2s;
+}
+
+@keyframes redball-rising {
+    0% {
+        top: 40px;
+    }
+
+    45% {
+        top: 20px;
+    }
+
+    55% {
+        top: 20px;
+    }
+
+    100% {
+        top: 40px;
+    }
+}
+
+.logo-camel-box {
+    position: absolute;
+    top: 30px;
+    left: 75px;
+    /*outline: 1px dotted blue;*/
+}
+
+#top-logo.play .logo-camel-box {
+    /*anmation*/
+    animation: camel-moving 1s ease-in-out 4s,
+        camel-spinning .5s linear 5s;
+}
+
+@keyframes camel-moving {
+    0% {
+        left: 75px;
+    }
+
+    50% {
+        left: 10px;
+    }
+
+    100% {
+        left: 75px;
+    }
+
+}
+
+@keyframes camel-spinning {
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.camel-tongue {
+    position: absolute;
+    top: 6px;
+    left: -21px;
+    background-image: url(../images/mlogo_01.png);
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 8px;
+}
+
+#top-logo.play .camel-tongue {
+    /*anmation*/
+    animation: tongue-sticking .7s ease-in-out 3s;
+}
+
+@keyframes tongue-sticking {
+    0% {
+        left: -21px;
+        background-image: url(../images/mlogo_01.png);
+    }
+
+    15% {
+        left: -26px;
+        background-image: url(../images/mlogo_02.png);
+    }
+
+    25% {
+        left: -31px;
+        background-image: url(../images/mlogo_03.png);
+    }
+
+    35% {
+        left: -41px;
+        background-image: url(../images/mlogo_04.png);
+    }
+
+    45% {
+        left: -41px;
+        background-image: url(../images/mlogo_04.png);
+    }
+
+    65% {
+        left: -31px;
+        background-image: url(../images/mlogo_03.png);
+    }
+
+    75% {
+        left: -26px;
+        background-image: url(../images/mlogo_02.png);
+    }
+
+    85% {
+        left: -21px;
+        background-image: url(../images/mlogo_01.png);
+    }
+
+    100% {
+        left: -21px;
+        background-image: url(../images/mlogo_01.png);
+    }
+}
+
+.camel-body {
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 90px;
+    width: 100%;
+    height: 40px;
+    background: #5c5c5c;
+}
+
+.top-gnb {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #5c5c5c;
+    /*background-image: linear-gradient(to bottom, #cecece 0%, #bababa 20%, #8a8a8a 80%, #5c5c5c 100%);*/
+}
+
+.top-gnb > ul {
+    width: 600px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.top-gnb > ul > li {
+    width: 150px;
+    height: 40px;
+    text-align: center;
+}
+
+.top-gnb a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-decoration: none;
+    font: bold 20px/40px "SF Pro Display";
+    transition: all .3s;
+}
+
+/*하위메뉴 기본 설정 및 숨기기*/
+.sub-menu {
+    background-color: #cecece;
+    /*text-shadow: 0 1px 0 #fff;
+    border-radius: 0 0 4px 4px;*/
+    height: 0;
+    overflow: hidden;
+    transition: height .4s ease-out;
+}
+
+.sub-menu > li {
+    width: 100%;
+}
+
+.sub-menu > li > a {
+    color: #777;
+}
+
+/*Hover Sup*/
+.top-gnb > ul > li:hover > a {
+    color: #777;
+    background-color: #cecece;
+    /*
+    text-shadow: 0 1px 0 #fff;
+    background-image: linear-gradient(to top, #cecece 0%, #bababa 20%, #8a8a8a 80%, #5c5c5c 100%);
+    */
+}
+
+/*Hover Sub*/
+.sub-menu > li:hover > a {
+    color: #777;
+    background-color: #bababa;
+    /*text-shadow: 0 1px 0 #fff;*/
+}
+
+/*하위 메뉴 나타나기*/
+.top-gnb > ul > li:hover .sub-menu {
+    height: 120px;
+}
+
+/*회원 메뉴*/
+.top-sign-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 7px;
+}
+
+.top-sign-menu li {
+    padding: 0 3px;
+    line-height: 40px;
+    font-size: 12px;
+}
+
+.top-sign-menu li + li::before {
+    content: "·";
+    margin-right: 3px;
+}
+
+/*소셜메뉴*/
+.top-sns-menu {
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    /*3無*/
+}
+
+.top-sns-menu:after {
+    content: "";
+    display: block;
+    clear: both;
+    /*float해제*/
+}
+
+.top-sns-menu li {
+    float: left;
+    width: 30px;
+    height: 30px;
+    /*outline: 1px solid red;*/
+    background: url(../images/icons.png) no-repeat;
+}
+
+.top-sns-menu a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/*페북*/
+.top-sns-menu li:first-child {
+    background-position: -60px 0px;
+}
+
+/*페북 마우스 오버시*/
+.top-sns-menu li:first-child:hover {
+    background-position: -60px -30px;
+}
+
+/*인스타*/
+.top-sns-menu li:nth-child(2) {
+    background-position: -30px 0px;
+}
+
+/*인스타 마우스 오버시*/
+.top-sns-menu li:nth-child(2):hover {
+    background-position: -30px -30px;
+}
+
+/*트위터*/
+.top-sns-menu li:last-child {
+    background-position: 0px 0px;
+}
+
+/*트위터 마우스 오버시;*/
+.top-sns-menu li:last-child:hover {
+    background-position: 0px -30px;
+}
+
+#main {
+    position: relative;
+    /*background-color: aquamarine;*/
+    min-height: 590px;
+}
+
+#info {
+    position: relative;
+    height: 90px;
+    border-top: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#info > img {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#info > address {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    color: #404040;
+    text-align: center;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 90px;
+}

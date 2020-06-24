@@ -1,0 +1,107 @@
+@charset "utf-8";
+/*myitem item_.css*/
+@import url(./reset.css);
+@import url(./core.css);
+@import url(./common.css);
+
+#main {
+    min-height: 500px;
+    overflow: hidden;
+}
+
+.main-title{
+    width: 700px;
+    height: 45px;
+    margin: 0 auto;
+    margin-top: 80px;
+    font-size: 17px;
+    line-height: 45px;
+    font-weight: bolder;
+    color: #777;
+    /*outline: 1px solid red;*/
+}
+
+.main-title::before{
+    content: url(../images/myitems_icon_01.png);
+    margin-right: 5px;
+    vertical-align: -20px;
+}
+
+.icon-11::before{
+    content: url(../images/myitems_icon_01.png);
+}
+
+.icon-12::before{
+    content: url(../images/myitems_icon_02.png);
+}
+
+.icon-13::before{
+    content: url(../images/myitems_icon_03.png);
+}
+
+.icon-24::before{
+    content: url(../images/myitems_icon_04.png);
+}
+
+.icon-25::before{
+    content: url(../images/myitems_icon_05.png);
+}
+
+.icon-26::before{
+    content: url(../images/myitems_icon_06.png);
+}
+
+.main-contain{
+    position: relative;
+    width: 700px;
+    height: 300px;
+    margin: 0 auto;
+    /*outline: 1px solid blue;*/
+}
+
+.main-contain::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 1px;
+    height: 90%;
+    background-color: #ccc;
+}
+
+.main-img{
+    position: absolute;
+    top: 0;
+    left: 25%;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: all .6s ease-in-out;
+}
+
+.main-img img{
+    width: 90%;
+    /*max-height: 90%;*/
+    margin: 15px;
+}
+
+.main-text{
+    position: absolute;
+    top: 0;
+    /*left: 50%;*/
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    font-size: 13px;
+    color: #777;
+    line-height: 30px;
+    text-indent: 10px;
+    left: 25%;
+    opacity: 0;
+    transition: all .6s ease-in-out;
+}
+
+

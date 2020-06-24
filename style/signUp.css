@@ -1,0 +1,152 @@
+@charset "utf-8";
+/*myitem templet.css*/
+@import url(./reset.css);
+@import url(./core.css);
+@import url(./common.css);
+
+#main {
+    height: 800px;
+}
+
+.title {
+    width: 700px;
+    height: 45px;
+    margin: 0 auto;
+    margin-top: 80px;
+    font-size: 17px;
+    line-height: 45px;
+    font-weight: bolder;
+    color: #777;
+    text-shadow: 1px 1px 1px #999;
+    /*outline: 1px solid red;*/
+}
+
+.title::before {
+    content: url(../images/mem_icon.png);
+    margin-right: 5px;
+    vertical-align: -12px;
+}
+
+#signUp {
+    width: 700px;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 2px solid #737373;
+    border-radius: 7px;
+    padding: 20px 50px;
+    box-sizing: border-box;
+}
+
+#signUp ul {
+    width: 100%;
+    height: 100%;
+    font-size: 17px;
+    font-weight: bolder;
+    color: #737373;
+}
+
+#signUp ul li {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+}
+
+#signUp label {
+    display: inline-block;
+    width: 200px;
+    padding-right: 70px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+#signUp input[type=text],
+#signUp input[type=password],
+#signUp input[type=email]{
+    width: 320px;
+    height: 36px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 13px;
+    color: #222;
+}
+
+#signUp input[type=radio]{
+    width: 20px;
+    height: 20px;
+    vertical-align: -4px;
+}
+
+#signUp input:focus {
+    outline: none;
+    border: 1px solid #b6e3bc;
+}
+
+#userSignupBtn {
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: #b6e3bc;
+    font-family: Nanum;
+    font-size: 17px;
+    font-weight: bolder;
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+
+.msg {
+    display: block;
+    width: 100px;
+    height: 12px;
+    line-height: 12px;
+    margin-top: -10px;
+    font-size: 9px;
+    color: red;
+    white-space: nowrap;
+    text-align: left;
+}
+
+#conf {
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    height: 600px;
+    border: 2px solid #737373;
+    border-radius: 7px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.terms_p {
+    border: none;
+    border-radius: 7px;
+}
+
+.YNbox {
+    position: absolute;
+    right: 0;
+}
+
+.YNbox > button {
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: #b6e3bc;
+    font-family: Nanum;
+    font-size: 17px;
+    font-weight: bolder;
+    margin: 0 10px;
+    margin-top: -30px;
+}
+
+

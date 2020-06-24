@@ -1,0 +1,65 @@
+@charset "utf-8";
+/*myitem location.css*/
+@import url(./reset.css);
+@import url(./core.css);
+@import url(./common.css);
+
+.title{
+    width: 700px;
+    height: 45px;
+    margin: 0 auto;
+    margin-top: 80px;
+    font-size: 17px;
+    line-height: 45px;
+    font-weight: bolder;
+    color: #777;
+    text-shadow: 1px 1px 1px #999;
+    /*outline: 1px solid red;*/
+}
+
+.title::before{
+    content: url(../images/loca_icon.png);
+    margin-right: 5px;
+    vertical-align: -12px;
+}
+
+.menu{
+    width: 700px;
+    margin: 5px auto;
+}
+
+.menu a {
+    margin: 0 9px;
+}
+
+.menu a.on {
+    font-size: 18px;
+    color: forestgreen;
+}
+
+#map {
+    width: 700px;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 10px;
+    border: 3px solid #ccc;
+}
+
+#map .mapgoogle {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    /*display: none;*/
+}
+
+#map .mapnaver {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#map .mapkakao {
+    width: 100%;
+    height: 100%;
+    display: none;
+}

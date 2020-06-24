@@ -1,0 +1,39 @@
+@charset "utf-8";
+/*myitem main.css*/
+@import url(./reset.css);
+@import url(./core.css);
+@import url(./common.css);
+
+.main-imageview {
+    text-align: center;
+}
+
+.main-imageview img {
+    width: 340px;
+    margin-top: 70px;
+}
+
+.main-thumbnail {
+    position: absolute;
+    bottom: 20px;
+    left: -25%;
+    width: 150%;
+    height: 100px;
+}
+
+.main-thumbnail ol {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+
+.main-thumbnail img {
+    height: 100px;
+    transition: all .4s;
+}
+
+.main-thumbnail img:hover {
+    height: 150px;
+    margin-top: -50px;
+}
